@@ -1,39 +1,32 @@
-:root {
-    --primary-color: #1770ff;
-    --secondary-color: #fff;
-    --background-color: #c5dbff;
-    --text-color: #333;
-    --font-family: 'Arial, sans-serif';
-}
 body {
-    font-family: var(--font-family);
-    background-color: var(--background-color);
-    color: var(--text-color);
+    font-family: Arial, sans-serif;
+    background-color: rgb(176, 224, 255);
+    color: #333;
     margin: 0;
     padding: 0;
 }
 div#header {
-    background-color: var(--primary-color);
+    background-color: rgb(0, 145, 255);
     padding: 20px;
     text-align: center;
-    border-bottom: 2px solid var(--secondary-color);
+    border-bottom: 2px solid whitesmoke;
 }
 h1 {
-    color: var(--text-color);
+    color: #333;
     font-size: 25px;
     text-align: center;
     margin-top: 20px;
 }
 h2 {
-    color: var(--text-color);
+    color: #333;
     text-align: center;
 }
 div#footer {
-    background-color: var(--primary-color);
+    background-color: rgb(0, 145, 255);
     padding: 20px;
     text-align: center;
     position: fixed;
     bottom: 0;
     width: 100%;
-    border-top: 2px solid var(--secondary-color);
+    border-top: 2px solid whitesmoke;
 }
