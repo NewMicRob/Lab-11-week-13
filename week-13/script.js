@@ -68,6 +68,10 @@ class store { //Class to create a store
         return total; //Returns th total
     }
     findProductByName(name) { //Method to find by name
+        if (!name) { //If name is not found
+            return null; //Returns null
+        } else {
         return this.inventory.find(product => product.name === name); //Returns product with the name
+        }
     }
 }
