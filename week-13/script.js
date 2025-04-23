@@ -1,5 +1,5 @@
 //Part 1
-class productProperties { //Mame of the class being created
+class productProperties { //Name of the class being created
     constructor(name, price, quantity) { //Class attributes
         this.name = name; //Name of a product
         this.price = price; //Price of a product
@@ -16,10 +16,10 @@ class productProperties { //Mame of the class being created
 
     //Part 3
     static applyDiscount(products, discount) {
-        products.forEach(product => { // goes over each product in the array
-            product.price -= product.price * discount; // Update the product's price directly
+        products.forEach(product => { //Goes over each product in the array
+            product.price -= product.price * discount; //Update the product's price directly
         });
-        return products; // Return the updated products array
+        return products; //Return the updated products array
     }
 
 }
@@ -51,7 +51,7 @@ let perishable2 = new perishableProductProperties('Eggs', 2.0, 20, '2025-01-08')
 console.log(perishable1.toString())
 console.log(perishable2.toString());
 
-let discount = 0.15; // The discount value
+let discount = 0.15; //The discount value
 
 class store { //Class to create a store
     constructor(inventory = []) { //attribute/property
@@ -60,7 +60,11 @@ class store { //Class to create a store
     addProduct(product) { //Method to add a product to the store
         this.inventory.push(product); //Adds the product to the inventory
     }
-    getInventoryValue() { //Method to get the inventory of the store
-        return this.inventory; //Returns the inventory
+    getInventoryValue() { //Method to get the value of all products in the inventory
+        let total = 0; //Set starting value
+        this.inventory.forEach(function(product) { //Goes through each product in the array
+            total += product.getTotalValue(); //Adds each products value to the total
+        });
+        return total; //Returns th total
     }
 }
