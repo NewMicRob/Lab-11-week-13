@@ -79,5 +79,14 @@ class store { //Class to create a store
 let newProduct1 = new productProperties('Banana', 0.5, 20);
 let newProduct2 = new productProperties('Orange', 0.75, 15);
 let newProduct3 = new productProperties('Grapes', 2.0, 5);
-let newProduct4 = new PerishableProductProperties('Yogurt', 1.0, 10, '2024-11-30');
-let newProduct5 = new PerishableProductProperties('Cheese', 3.0, 8, '2024-10-15');
+let newProduct4 = new perishableProductProperties('Yogurt', 1.0, 10, '2024-11-30');
+let newProduct5 = new perishableProductProperties('Cheese', 3.0, 8, '2024-10-15');
+
+let inventory = new store(); //Creates a new store object
+
+//Adds to inventory
+inventory.addProduct(newProduct1);
+inventory.addProduct(newProduct2);
+inventory.addProduct(newProduct3);
+inventory.addProduct(newProduct4);
+inventory.addProduct(newProduct5);
