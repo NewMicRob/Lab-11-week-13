@@ -53,4 +53,8 @@ console.log(perishable2.toString());
 
 let discount = 0.15; // The discount value
 
-let products = []; // The Empty array
+class store { //Class to create a store
+    constructor(inventory) { //attribute/property
+        this.inventory = inventory; 
+    }
+}
