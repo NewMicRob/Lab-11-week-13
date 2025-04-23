@@ -90,3 +90,6 @@ inventory.addProduct(newProduct2);
 inventory.addProduct(newProduct3);
 inventory.addProduct(newProduct4);
 inventory.addProduct(newProduct5);
+
+//Before discount
+console.log('Before discount: $' + inventory.getInventoryValue());
