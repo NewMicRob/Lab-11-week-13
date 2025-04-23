@@ -11,8 +11,17 @@ class productProperties { //Mame of the class being created
     }
 
     toString() { //Method to return the string representation of the product
-        return `Product Name: ${this.name}, Price: ${this.price}, Quantity: ${this.quantity}, Total Value: ${this.getTotalValue()}`; //Returns the string of the products name its price and quantity
+        return `Product Name: ${this.name}, Price: ${this.price}, Quantity: ${this.quantity}, Total Value: ${this.getTotalValue()}. `; //Returns the string of the products name its price and quantity
     }
+
+    //Part 3
+    static applyDiscount(products, discount) {
+        products.forEach(product => { // goes over each product in the array
+            product.price -= product.price * discount; // Update the product's price directly
+        });
+        return products; // Return the updated products array
+    }
+
 }
 
 //Part 2
@@ -42,4 +51,6 @@ let perishable2 = new perishableProductProperties('Eggs', 2.0, 20, '2025-01-08')
 console.log(perishable1.toString())
 console.log(perishable2.toString());
 
-//Part 3
+let discount = 0.15; // The discount value
+
+let products = []; // The Empty array
