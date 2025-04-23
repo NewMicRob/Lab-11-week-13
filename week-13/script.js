@@ -28,7 +28,7 @@ class productProperties { //Name of the class being created
 class perishableProductProperties extends productProperties { //Class that extends the productProperties class
     constructor(name, price, quantity, expirationDate) { //Constructor of the class
         super(name, price, quantity); //Calls the parent class
-        this.expirationDate = expirationDate; //Adds expiratoion date attribute/property
+        this.expirationDate = expirationDate; //Adds expiration date attribute/property
     }
 
     toString() { //Method to return the string representation of the perishable product
@@ -65,7 +65,7 @@ class store { //Class to create a store
         this.inventory.forEach(function(product) { //Goes through each product in the array
             total += product.getTotalValue(); //Adds each products value to the total
         });
-        return total; //Returns th total
+        return total; //Returns the total
     }
     findProductByName(name) { //Method to find by name
         if (!name) { //If name is not found
@@ -98,3 +98,7 @@ console.log('Before discount: $' + inventory.getInventoryValue());
 //After discount
 productProperties.applyDiscount(inventory.inventory, discount); //Gets applydiscount from productproperies and applies it to inventorys inventory.
 console.log('After discount: $' + inventory.getInventoryValue()); //Logs it
+
+//findProductByName Log
+console.log(inventory.findProductByName('Banana'));
+console.log(inventory.findProductByName('Almonds'));
