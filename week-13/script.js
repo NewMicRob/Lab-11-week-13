@@ -76,6 +76,7 @@ class store { //Class to create a store
     }
 }
 
+//New Products
 let newProduct1 = new productProperties('Banana', 0.5, 20);
 let newProduct2 = new productProperties('Orange', 0.75, 15);
 let newProduct3 = new productProperties('Grapes', 2.0, 5);
@@ -93,3 +94,7 @@ inventory.addProduct(newProduct5);
 
 //Before discount
 console.log('Before discount: $' + inventory.getInventoryValue());
+
+//After discount
+productProperties.applyDiscount(inventory.inventory, discount); //Gets applydiscount from productproperies and applies it to inventorys inventory.
+console.log('After discount: $' + inventory.getInventoryValue()); //Logs it
