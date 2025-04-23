@@ -57,4 +57,7 @@ class store { //Class to create a store
     constructor(inventory) { //attribute/property
         this.inventory = inventory; 
     }
+    addProduct(product) { //Method to add a product to the store
+        this.inventory.push(product); //Adds the product to the inventory
+    }
 }
